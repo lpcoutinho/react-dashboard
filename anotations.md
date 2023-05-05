@@ -80,15 +80,23 @@ import { MdOutlineCancel } from 'react-icons/md'; import { TooltipComponent } fr
       )}
 36. create a TooltipComponent and a button MdOutlineCancel inside it
 37. create the links with `map`
-38. creat activeLink & normalLink
-39. 
-40. 
-41. 
-42. 
-43. 
-44. 
-45. 
-46. 
+38. create activeLink & normalLink
+39. create context/ContextProvider.js
+40. create context to activemenu
+41. edite index.js to import ContextProvider and add to reactDOM
+    - ReactDOM.render(
+    <ContextProvider>
+        <App />
+    </ContextProvider>,
+    document.getElementById('root')
+);
+42. update const activeMenu in App.js
+    - const { activeMenu } = useStateContext();
+43. update Sidebar to import { useStateContext } from './contexts/ContextProvider'
+
+44. update ContextProvider.js to receive setActiveMenu
+45. update Sidebar.js to   const { activeMenu, setActiveMenu } = useStateContext();
+46. update Sidebar.js to setActiveMenu
 47. 
 48. 
 49. 
