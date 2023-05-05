@@ -63,3 +63,34 @@
 29. import components & pages in APP.js
 30. insert components navbar & sidebar in your divs
 31 . update element in Routes to receive components
+32. git push
+############# build sidebar #############
+33. import { Link, NavLink } from 'react-router-dom';import { SiShopware } from 'react-icons/si';
+import { MdOutlineCancel } from 'react-icons/md'; import { TooltipComponent } from '@syncfusion/ej2-react-popups'; import { links } from '../data/dummy';
+34. create const activeMenu
+35. create activeMenu and a link whith icon and text
+    - { activeMenu && (
+        <>
+          <div className="flex justify-between items-center">
+            <Link to="/" onClick={() => {}} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+              <SiShopware /> <span>Teste</span>
+            </Link>
+          </div>
+        </>
+      )}
+36. create a TooltipComponent and a button MdOutlineCancel inside it
+37. create the links with `map`
+38. creat activeLink & normalLink
+39. 
+40. 
+41. 
+42. 
+43. 
+44. 
+45. 
+46. 
+47. 
+48. 
+49. 
+50. 
+51. 
