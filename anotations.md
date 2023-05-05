@@ -64,6 +64,8 @@
 30. insert components navbar & sidebar in your divs
 31 . update element in Routes to receive components
 32. git push
+
+
 ############# build sidebar #############
 33. import { Link, NavLink } from 'react-router-dom';import { SiShopware } from 'react-icons/si';
 import { MdOutlineCancel } from 'react-icons/md'; import { TooltipComponent } from '@syncfusion/ej2-react-popups'; import { links } from '../data/dummy';
@@ -97,8 +99,35 @@ import { MdOutlineCancel } from 'react-icons/md'; import { TooltipComponent } fr
 44. update ContextProvider.js to receive setActiveMenu
 45. update Sidebar.js to   const { activeMenu, setActiveMenu } = useStateContext();
 46. update Sidebar.js to setActiveMenu
-47. 
-48. 
-49. 
-50. 
-51. 
+
+############# build navbar #############
+47. import icons, TooltipComponent, avatar, components, useStateContext
+48. create const { activeMenu, setActiveMenu } = useStateContext(); in const Navbar
+
+49. create const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
+  <TooltipComponent content={title} position="BottomCenter">
+    <button
+      type="button"
+      onClick={() => customFunc()}
+      style={{ color }}
+      className="relative text-xl rounded-full p-3 hover:bg-light-gray"
+    >
+      <span
+        style={{ background: dotColor }}
+        className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
+      />
+      {icon}
+    </button>
+  </TooltipComponent>
+);
+50. create menu 
+    -  <NavButton title='Menu' 
+        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} 
+        color='blue' 
+        icon={<AiOutlineMenu />}
+      />
+51. create components in div <div className="flex">
+52. to create user profile use TooltipComponent
+53. create context isClicked, setIsClicked
+54. call isClicked, setIsClicked to components in navbar
+    
